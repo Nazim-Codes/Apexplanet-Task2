@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form &amp; TodoList</title>
+    <link rel="stylesheet" href="app.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Choose an app" data-active="form">
+            <button id="form-btn" class="nav-link is-active" type="button" aria-controls="form-page" aria-pressed="true">
+                Form
+            </button>
+            <button id="todo-btn" class="nav-link" type="button" aria-controls="todo-page" aria-pressed="false">
+                TodoList
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="form-page" class="page form-page">
+            <form id="contact-form">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" placeholder="Enter your Name" required>
+
+                <label for="phone">Phone No</label>
+                <input type="text" name="phone" id="phone" placeholder="Enter your Phone no" required>
+
+                <label for="address">Address</label>
+                <input type="text" name="address" id="address" placeholder="Enter your Address" required>
+
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Enter your Email I'd" required>
+
+                <input type="submit" id="sub-btn" value="submit">
+            </form>
+        </section>
+
+        <section id="todo-page" class="page todo-page" hidden>
+            <h1>Simple Todo List</h1>
+            <p>Welcome to this todo list. Double click to edit the todo</p>
+            <div class="todo-entry">
+                <input type="text" id="todo-input" placeholder="Enter a todo and press Add or Enter">
+                <button id="add-btn" type="button">Add</button>
+            </div>
+            <ul id="todo-list"></ul>
+        </section>
+    </main>
+
+    <script src="form/script.js"></script>
+    <script src="todo/script.js"></script>
+</body>
+</html>
